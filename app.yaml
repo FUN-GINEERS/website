@@ -1,0 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+  - url: /
+    static_files: www/index.html
+    upload: www/index.html
+    secure: always
+    http_headers:
+      Strict-Transport-Security: 'max-age=604800; includeSubDomains; preload'
+  - url: /(.*)
+    static_files: www/\1
+    upload: www/(.*)
+    secure: always
+    http_headers:
+      Strict-Transport-Security: 'max-age=604800; includeSubDomains; preload'
