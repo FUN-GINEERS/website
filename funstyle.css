@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-image: url('/images/gradient1.gif');
+    background-repeat: repeat-x;
+    background-position:top;
+    background-color: #6a8491;
+}
+
+#logo {
+    width: 950px;
+}
+
+#wrap {
+    width: 950px;
+    margin: 0 auto;
+    background-image: url('/images/bg1.gif');
+    background-repeat: repeat-y;
+}
+
+#header {
+    padding: 5px 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+#nav {
+padding:5px 10px;
+background:#c99;
+}
+
+#main {
+float:left;
+width:480px;
+padding:10px;
+}
+
+h2 {
+margin:0 0 1em;
+}
+
+#sidebar {
+float:right;
+width:230px;
+padding:10px;
+}
+
+#footer {
+clear:both;
+padding:5px 10px;
+background:#cc9;
+}
+
+#footer p {
+margin:0;
+}
+
+#nav ul {
+margin:0;
+padding:0;
+list-style:none;
+}
+
+#nav li {
+display:inline;
+margin:0;
+padding:0;
+}
+
+* html #footer {
+height:1px;
+}
