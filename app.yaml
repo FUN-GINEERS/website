@@ -2,7 +2,6 @@ runtime: python37
 
 handlers:
   - url: /(community|discord|funcast|gamejam)?
-    script: main.app
     secure: always
   - url: /static/(.*)
     static_files: static/\1
