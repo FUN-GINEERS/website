@@ -2,39 +2,18 @@
 <html><head>
 <title>The FUN-GINEERS Discord</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
 
-<div class="fun-nav">
-<ul>
-<li><a href="/">Home</a></li>
-<li class="hide-nav"><a href="/community/index.html">Community</a></li>
-<li class="hide-nav"><a href="/discord/index.html">Discord</a></li>
-<li class="hide-nav"><a href="/gamejam/index.html">Game Jam</a></li>
-<li class="hide-nav"><a href="/funcast/index.html">The FUNCAST</a></li>
-<li class="dropdown-nav"><div class="dropdown">
-<a href="#">Menu</a>
-<div class="dropdown-content">
-<a href="/community/index.html">Community</a>
-<a href="/discord/index.html">Discord</a>
-<a href="/gamejam/index.html">Game Jam</a>
-<a href="/funcast/index.html">The FUNCAST</a>
-</div>
-</div></li>
-</ul>
-</div>
-
-<div class="fun-logo">
-<img class="fun-logo" src="/images/fungineers-logo.png" alt="Logo">
-</div>
+{% include 'common.html' %}
 
 <div class="fun-content">
 
 <div class="row">
   <div class="column d-left">
   <div class="d-pad-left">
-  <img width="100%" src="/images/fun-discord.png">
+  <img width="100%" src="/static/images/fun-discord.png">
 
     <div class="info-border" style="margin-top: 10px;">Connect to our server here: <a href="https://discord.me/fungineers">https://discord.me/fungineers</a></div>
 

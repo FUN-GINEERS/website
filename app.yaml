@@ -1,17 +1,18 @@
-runtime: python27
+runtime: python37
 api_version: 1
 threadsafe: true
 
 handlers:
-  - url: /
-    static_files: www/index.html
-    upload: www/index.html
+  - url: /(community|funcast|gamejam)?
+    script: main.app
     secure: always
     http_headers:
       Strict-Transport-Security: 'max-age=604800; includeSubDomains; preload'
-  - url: /(.*)
-    static_files: www/\1
-    upload: www/(.*)
+  - url: /static/(.*)
+    static_files: static/\1
+    upload: static/(.*)
     secure: always
     http_headers:
       Strict-Transport-Security: 'max-age=604800; includeSubDomains; preload'
+  - url: /favicon.ico
+    static_files: static/favicon.ico
