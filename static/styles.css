@@ -33,10 +33,10 @@ ul {
 
 /* Main Menu */
 
-div.fun-nav {
+nav {
   background-color: #333;
 }
-.fun-nav ul {
+nav ul {
   list-style-type: none;
   margin: auto;
   padding: 0px;
@@ -45,20 +45,26 @@ div.fun-nav {
   width: 60%;
   font-size: 14px;
 }
-.fun-nav li {
+
+nav li {
   float: left;
 }
-.fun-nav li a {
+
+nav li a,
+nav li a:visited,
+nav li a:hover {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-.fun-nav li a:hover {
+
+nav li a:hover {
   background-color: #85d2c6;
 }
-li.dropdown-nav {
+
+nav li.dropdown-nav {
   display: none;
 }
 
@@ -331,10 +337,10 @@ div.info-border a:active {
 
 /* Main Content */
 
-a {
+section a {
   border: 0px;
 }
-div.fun-logo {
+header {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
@@ -342,11 +348,11 @@ div.fun-logo {
   text-align: center;
   width: 100%;
 }
-.fun-logo img {
+header img {
   padding: 10px;
   width: 60%;
 }
-div.fun-content {
+section {
   margin: auto;
   margin-top: 20px;
   padding: 0px;
@@ -419,14 +425,14 @@ a.twitter-timeline:focus {
 /* Mobile Stuff */
 
 @media only screen and (max-width: 1000px) {
-  .fun-nav ul {
+  nav ul {
     width: 100%;
   }
-  .fun-logo img {
+  header img {
     padding: 10px;
     width: 90%;
   }
-  div.fun-content {
+  section {
     width: 100%;
     overflow: hidden;
   }
@@ -498,4 +504,3 @@ a.twitter-timeline:focus {
     display: block;
   }
 }
-
