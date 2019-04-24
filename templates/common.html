@@ -1,10 +1,20 @@
 <nav>
   <ul>
-    <li><a href="/">Home</a></li>
-    <li class="hide-nav"><a href="/community/">Community</a></li>
-    <li class="hide-nav"><a href="/discord/">Discord</a></li>
-    <li class="hide-nav"><a href="/gamejam/">Game Jam</a></li>
-    <li class="hide-nav"><a href="/funcast/">The FUNCAST</a></li>
+    <li {% if selected == 'index' %}class="selected"{% endif %}>
+      <a href="/">Home</a>
+    </li>
+    <li class="hide-nav {% if selected == 'community' %}selected{% endif %}">
+      <a href="/community/">Community</a>
+    </li>
+    <li class="hide-nav {% if selected == 'discord' %}selected{% endif %}">
+      <a href="/discord/">Discord</a>
+    </li>
+    <li class="hide-nav {% if selected == 'gamejam' %}selected{% endif %}">
+      <a href="/gamejam/">Game Jam</a>
+    </li>
+    <li class="hide-nav {% if selected == 'funcast' %}selected{% endif %}">
+      <a href="/funcast/">The FUNCAST</a>
+    </li>
     <li class="dropdown-nav">
       <div class="dropdown">
         <a href="#">Menu</a>

@@ -22,14 +22,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template('index.html')
+  return render_template('index.html', selected='index')
 
 # Support both with and without trailing slash.
 @app.route('/<page>/')
 @app.route('/<page>')
 def template_page(page):
+  template_name = page.strip('/')
   try:
-    return render_template('{}.html'.format(page.strip('/')))
+    return render_template('{}.html'.format(template_name),
+                           selected=template_name)
   except exceptions.TemplateNotFound as e:
     return abort(404)
 

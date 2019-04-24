@@ -60,7 +60,8 @@ nav li a:hover {
   text-decoration: none;
 }
 
-nav li a:hover {
+nav li a:hover,
+nav li.selected a {
   background-color: #85d2c6;
 }
 
@@ -444,16 +445,10 @@ a.twitter-timeline:focus {
   td.rem-pad {
     padding: 0px;
   }
-  li.hide-nav {
-    display: none;
-  }
-  td.hide-nav {
+  nav .hide-nav {
     display: none;
     padding: 0px;
     margin: 0px;
-  }
-  div.hide-nav {
-    display: none;
   }
   .c-width {
     width: 100%;
@@ -476,7 +471,7 @@ a.twitter-timeline:focus {
   .com-right {
     padding: 10px;
   }
-  li.dropdown-nav {
+  nav li.dropdown-nav {
     margin: 0px;
     display: block;
     color: white;
@@ -485,12 +480,12 @@ a.twitter-timeline:focus {
     text-decoration: none;
     float: right;
   }
-  .dropdown {
+  nav .dropdown {
     padding: 0px;
     display: block;
     margin: auto;
   }
-  .dropdown-content {
+  nav .dropdown-content {
     display: none;
     position: absolute;
     background-color: #333;
@@ -500,7 +495,7 @@ a.twitter-timeline:focus {
     z-index: 1;
     right: 0;
   }
-  .dropdown:hover .dropdown-content {
+  nav .dropdown:hover .dropdown-content {
     display: block;
   }
 }
