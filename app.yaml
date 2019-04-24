@@ -6,8 +6,6 @@ handlers:
   - url: /(community|funcast|gamejam)?
     script: main.app
     secure: always
-    http_headers:
-      Strict-Transport-Security: 'max-age=604800; includeSubDomains; preload'
   - url: /static/(.*)
     static_files: static/\1
     upload: static/(.*)
