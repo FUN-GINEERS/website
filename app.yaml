@@ -3,7 +3,7 @@ api_version: 1
 threadsafe: true
 
 handlers:
-  - url: /(community|funcast|gamejam)?
+  - url: /(community|discord|funcast|gamejam)?
     script: main.app
     secure: always
   - url: /static/(.*)
