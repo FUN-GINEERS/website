@@ -13,23 +13,25 @@
 # limitations under the License.
 
 # [START gae_python37_app]
-import flask
-import jinja2
+from flask import Flask
+from flask import render_template
+from flask import abort
+from jinja2 import exceptions
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return flask.render_template('index.html')
+  return render_template('index.html')
 
 # Support both with and without trailing slash.
 @app.route('/<page>/')
 @app.route('/<page>')
 def template_page(page):
   try:
-    return flask.render_template('{}.html'.format(page.strip('/')))
-  except jinja2.exceptions.TemplateNotFound as e:
-    return flask.abort(404)
+    return render_template('{}.html'.format(page.strip('/')))
+  except exceptions.TemplateNotFound as e:
+    return abort(404)
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
