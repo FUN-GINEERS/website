@@ -3,6 +3,7 @@ runtime: python37
 handlers:
   - url: /(community|discord|funcast|gamejam)?
     secure: always
+    script: auto
   - url: /static/(.*)
     static_files: static/\1
     upload: static/(.*)
